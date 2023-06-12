@@ -8,12 +8,14 @@ import routes from './routes';
 
 import GlobalStyle from './styles/GlobalStyle';
 import DefaultTheme from './styles/defaultTheme';
+import Header from './components/Header';
 
 const router = createBrowserRouter(routes);
 
 export default function App() {
   return (
     <ThemeProvider theme={DefaultTheme}>
+      <Header></Header>
       <Reset />
       <GlobalStyle />
       <RouterProvider router={router} />
