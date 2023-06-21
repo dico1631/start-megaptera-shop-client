@@ -13,11 +13,11 @@
 - [styled-reset](https://github.com/zacanger/styled-reset)
 - [usehooks-ts](https://github.com/juliencrn/usehooks-ts)
 - [usestore-ts](https://github.com/seed2whale/usestore-ts)
-    - [Axios](https://github.com/axios/axios)
-    - [tsyringe](https://github.com/microsoft/tsyringe)
-    - [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
+  - [Axios](https://github.com/axios/axios)
+  - [tsyringe](https://github.com/microsoft/tsyringe)
+  - [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 - [jest-dom](https://github.com/testing-library/jest-dom)
-    - [MSW](https://github.com/mswjs/msw)
+  - [MSW](https://github.com/mswjs/msw)
 - [CodeceptJS](https://codecept.io/)
 
 ## 패키지 생성
@@ -230,7 +230,7 @@ npm i -D msw
 
 `src/setupTest.ts`, `src/mocks/server.ts`, `src/mocks/handler.ts` 파일 추가
 
-### Jest 설정 변경
+### Jest 설정변경
 
 `jest.config.js` 에 `setupFilesAfterEnv` 의 속성에 `setupTest.ts` 파일 추가
 

@@ -15,7 +15,6 @@ const router = createBrowserRouter(routes);
 export default function App() {
   return (
     <ThemeProvider theme={DefaultTheme}>
-      <Header></Header>
       <Reset />
       <GlobalStyle />
       <RouterProvider router={router} />

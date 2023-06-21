@@ -1,17 +1,23 @@
-import { useFetch } from "usehooks-ts";
+import { useEffect } from "react";
+import { useStore } from "usestore-ts";
+import { container } from "tsyringe";
+
+import ProductsStore from "../stores/ProductsStore";
+
 import { ProductSummary } from "../types";
 
-const apiBaseUrl = 'https://shop-demo-api-01.fly.dev';
+export default function useFetchProducts({ categoryId }: {
+  categoryId: string;
+}): {
+  products: ProductSummary[];
+} {
+  const store = container.resolve(ProductsStore);
 
-export default function useFetchProducts() {
-  type Data = {
-    products: ProductSummary[];
-  };
+  const [{ products }] = useStore(store);
 
-  const { data } = useFetch<Data>(`${apiBaseUrl}/products`);
+  useEffect(() => {
+    store.fetchProducts({ categoryId });
+  }, [store, categoryId]);
 
-  return {
-    products: data?.products ?? [],
-    loading: !data,
-  };
+  return { products };
 }

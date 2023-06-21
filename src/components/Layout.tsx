@@ -1,11 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import Header from './Header';
 
 export default function Layout() {
   return (
     <>
-      <header>
-        <h1>리액트 프로젝트</h1>
-      </header>
+      <Header></Header>
       <main>
         <Outlet />
       </main>

@@ -8,7 +8,7 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config = {
-  name: '20230516-start-react-with-typescript',
+    name: '20230516-start-react-with-typescript',
   tests: './tests/**/*_test.ts',
   output: './output',
   helpers: {
